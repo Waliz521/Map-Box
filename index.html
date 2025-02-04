@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Hotspot & spatial correlation analysis</title>
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="legend">
+      <h4>Hotspot Confidence Levels</h4>
+      <div>
+        <span style="background-color: #ff0000"></span>99% Confidence Cold Spot
+      </div>
+      <div>
+        <span style="background-color: #ff7f00"></span>95% Confidence Cold Spot
+      </div>
+      <div>
+        <span style="background-color: #ffff00"></span>90% Confidence Cold Spot
+      </div>
+      <div><span style="background-color: #00ff00"></span>Not Significant</div>
+      <div>
+        <span style="background-color: #0000ff"></span>90% Confidence Hot Spot
+      </div>
+      <div>
+        <span style="background-color: #4b0082"></span>95% Confidence Hot Spot
+      </div>
+      <div>
+        <span style="background-color: #8b00ff"></span>99% Confidence Hot Spot
+      </div>
+    </div>
+    <div id="layer-toggle">
+      <h4>Toggle Hotspot Layers</h4>
+      <div>
+        <input type="checkbox" id="layer1" checked />
+        <label for="layer1">Hotspots Arithmetic mean 1000M</label>
+      </div>
+      <div>
+        <input type="checkbox" id="layer2" checked />
+        <label for="layer2">Hotspots Arithmetic mean 2500M</label>
+      </div>
+      <div>
+        <input type="checkbox" id="layer3" checked />
+        <label for="layer3">Hotspots Arithmetic mean 5000M</label>
+      </div>
+      <div>
+        <input type="checkbox" id="layer4" checked />
+        <label for="layer4">Hotspots Total Emissions 1000M</label>
+      </div>
+      <div>
+        <input type="checkbox" id="layer5" checked />
+        <label for="layer5">Hotspots Total Emissions 2500M</label>
+      </div>
+      <div>
+        <input type="checkbox" id="layer6" checked />
+        <label for="layer6">Hotspots Total Emissions 5000M</label>
+      </div>
+    </div>
+    <div id="analysis">
+      <h4>Hotspot & Spatial Correlation analysis</h4>
+      <h3>
+        This analysis examines the spatial correlation between industrial
+        emissions and air quality in Los Angeles using multiple spatial
+        analytical techniques at different distance bands (1000m, 2500m, and
+        5000m). The study employs several GIS methods to understand the spatial
+        relationships between these environmental variables.
+      </h3>
+    </div>
+    <button id="fly">Fly to Los Angeles</button>
+    <div id="chart-controls">
+      <div id="chart-description">
+        Click the buttons below to view spatial correlation charts:
+      </div>
+      <div id="chart-buttons">
+        <button id="chart1-btn">Chart 1</button>
+        <button id="chart2-btn">Chart 2</button>
+        <button id="chart3-btn">Chart 3</button>
+      </div>
+    </div>
+
+    <div id="chart-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="chart-container"></div>
+      </div>
+    </div>
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
