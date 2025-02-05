@@ -81,8 +81,7 @@ map.on("load", function () {
 
   // Add hotspot sources and layers
   hotspotLayers.forEach((layer, index) => {
-    const url = `http://127.0.0.1:5500/wali/${layer.file}`;
-
+    const url = `wali/${layer.file}`;
     // Check if the GeoJSON file is fetched correctly
     fetch(url)
       .then((response) => {
