@@ -2,9 +2,9 @@ mapboxgl.accessToken =
   "pk.eyJ1Ijoid2FsaTUyMSIsImEiOiJjbTZnemdqdHMwNjN6MnJyN2cyZGhtZHZuIn0.K2Pjz_pis0wgQBSCPSdM0g";
 const map = new mapboxgl.Map({
   container: "map", // container ID
-  style: "mapbox://styles/wali521/cm556y5qq00fl01sahk0c1im7",
-  center: [-119.4179, 36.7783], // starting position [lng, lat]
-  zoom: 5, // starting zoom
+  style: 'mapbox://styles/mapbox/dark-v11',
+  center: [-119.4179, 36.7783],
+  zoom: 5,
 });
 
 // Define hotspot layers
@@ -12,38 +12,38 @@ const hotspotLayers = [
   {
     id: "hotspots-arithmetic-mean-1000M",
     file: "Hotspots_Arithmetic_Mean_1000M.geojson",
-    property: "GiZScore Fixed 1000", // Property to use for styling
-    giBinProperty: "Gi_Bin Fixed 1000", // Property to use for color classification
+    property: "GiZScore Fixed 1000",
+    giBinProperty: "Gi_Bin Fixed 1000",
   },
   {
     id: "hotspots-arithmetic-mean-2500M",
     file: "Hotspots_Arithmetic_Mean_2500M.geojson",
-    property: "GiZScore Fixed 2500", // Property to use for styling
-    giBinProperty: "Gi_Bin Fixed 2500", // Property to use for color classification
+    property: "GiZScore Fixed 2500",
+    giBinProperty: "Gi_Bin Fixed 2500", 
   },
   {
     id: "hotspots-arithmetic-mean-5000M",
     file: "Hotspots_Arithmetic_Mean_5000M.geojson",
-    property: "GiZScore Fixed 5000", // Property to use for styling
-    giBinProperty: "Gi_Bin Fixed 5000", // Property to use for color classification
+    property: "GiZScore Fixed 5000",
+    giBinProperty: "Gi_Bin Fixed 5000",
   },
   {
     id: "hotspots-total-emissions-1000M",
     file: "Hotspots_Total_Emissions_1000M.geojson",
-    property: "GiZScore Fixed 1000", // Property to use for styling
-    giBinProperty: "Gi_Bin Fixed 1000", // Property to use for color classification
+    property: "GiZScore Fixed 1000", 
+    giBinProperty: "Gi_Bin Fixed 1000",
   },
   {
     id: "hotspots-total-emissions-2500M",
     file: "Hotspots_Total_Emissions_2500M.geojson",
-    property: "GiZScore Fixed 2500", // Property to use for styling
-    giBinProperty: "Gi_Bin Fixed 2500", // Property to use for color classification
+    property: "GiZScore Fixed 2500",
+    giBinProperty: "Gi_Bin Fixed 2500",
   },
   {
     id: "hotspots-total-emissions-5000M",
     file: "Hotspots_Total_Emissions_5000M.geojson",
-    property: "GiZScore Fixed 5000", // Property to use for styling
-    giBinProperty: "Gi_Bin Fixed 5000", // Property to use for color classification
+    property: "GiZScore Fixed 5000",
+    giBinProperty: "Gi_Bin Fixed 5000",
   },
 ];
 
